@@ -1,0 +1,21 @@
+class WebGameControllerDelegateImpl: WebGameControllerDelegate {
+    private let handler = SandboxObjectRequestHandler()
+    
+    func webGameWilLoad(_ controller: WebGameController) {
+        <% if @google_ads %>
+        handler.register(GoogleAdmob())
+        <% end %>
+        <% if @mintegral_ads %>
+        handler.register(MintegralBanner())
+        handler.register(MintegralInterstitialVideoAd())
+        <% end %>
+        <% if @bytedance_ads %>
+        handler.register(BytedanceBanner())
+        handler.register(BytedanceVideo(controller: controller))
+        <% end %>
+    }
+    
+    func webGameConroller(_ controller: WebGameController, didReceiveRequest request: SandboxObjectRequest) {   
+        handler.handle(request, from: controller)
+    }
+}

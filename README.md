@@ -78,7 +78,7 @@ The result iPA file will be located in XcodeProjectBuild folder.
 ## Uploading to iTunes Connect
 ```
 sandbox-build -u
-``
+```
 
-# Trouble Shooting Apple cerrificates
+# Troubleshooting Apple cerrificates
 You will need to have Apple Developer Certificate and Apple Distribution Certificate for Xcode 11. The easiest way to create them is to use Xcode 11. Just generate an xcode project and archive the game. Xcode will generate all the neccesary certificates and add them to your keychain.

@@ -37,7 +37,7 @@ sdk: "8.0" # Minimum iOS SDK to support. 8.0 is the minimum version.
 developmentTeam: "FSX848FP3F" # The id of your apple development team.
 fastlane: 
     # appleID & teamID are quired if you want to build using the script
-    appleID: "yaroslav.zhurakovskiy@gmail.com" // It is required if you want to build 
+    appleID: "yaroslav.zhurakovskiy@gmail.com"
     teamID: "FSX848FP3F" # The same as 'developmentTeam' key
     
     # itcTeamID is required if you want to upload to testflight using the script
